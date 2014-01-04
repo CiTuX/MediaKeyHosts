@@ -1,0 +1,11 @@
+c:\users\mike\documents\visual studio 2013\Projects\MediaKeyHostWin\MediaKeyHostWin\bin\Debug\MediaKeyHostWin.exe.config
+C:\Users\Mike\Documents\Visual Studio 2013\Projects\MediaKeyHostWin\MediaKeyHostWin\bin\Debug\MediaKeyHostWin.exe
+C:\Users\Mike\Documents\Visual Studio 2013\Projects\MediaKeyHostWin\MediaKeyHostWin\bin\Debug\MediaKeyHostWin.pdb
+C:\Users\Mike\Documents\Visual Studio 2013\Projects\MediaKeyHostWin\MediaKeyHostWin\obj\Debug\MediaKeyHostWin.exe
+C:\Users\Mike\Documents\Visual Studio 2013\Projects\MediaKeyHostWin\MediaKeyHostWin\obj\Debug\MediaKeyHostWin.pdb
+C:\Users\Mike\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeyHostWin\bin\Debug\MediaKeyHostWin.exe.config
+C:\Users\Mike\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeyHostWin\obj\Debug\MediaKeyHostWin.exe
+C:\Users\Mike\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeyHostWin\obj\Debug\MediaKeyHostWin.pdb
+C:\Users\Mike\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeyHostWin\bin\Debug\MediaKeyHostWin.exe
+C:\Users\Mike\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeyHostWin\bin\Debug\MediaKeyHostWin.pdb
+C:\Users\Mike\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeyHostWin\obj\Debug\MediaKeyHostWin.csprojResolveAssemblyReference.cache
