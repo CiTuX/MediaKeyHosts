@@ -16,7 +16,33 @@
 		4CBD86FB1870E7CB00C40B72 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FA1870E7CB00C40B72 /* Carbon.framework */; };
 		4CBD86FD1870E7F300C40B72 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FC1870E7F300C40B72 /* IOKit.framework */; };
 		4CBD86FF1870E81100C40B72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FE1870E81100C40B72 /* Cocoa.framework */; };
+		4CF9B21A188241D100315AA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FE1870E81100C40B72 /* Cocoa.framework */; };
+		4CF9B224188241D200315AA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B222188241D200315AA7 /* InfoPlist.strings */; };
+		4CF9B226188241D200315AA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9B225188241D200315AA7 /* main.m */; };
+		4CF9B22A188241D200315AA7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B228188241D200315AA7 /* Credits.rtf */; };
+		4CF9B22D188241D200315AA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9B22C188241D200315AA7 /* AppDelegate.m */; };
+		4CF9B230188241D200315AA7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B22E188241D200315AA7 /* MainMenu.xib */; };
+		4CF9B232188241D200315AA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B231188241D200315AA7 /* Images.xcassets */; };
+		4CF9B239188241D200315AA7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF9B238188241D200315AA7 /* XCTest.framework */; };
+		4CF9B23A188241D200315AA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FE1870E81100C40B72 /* Cocoa.framework */; };
+		4CF9B242188241D200315AA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B240188241D200315AA7 /* InfoPlist.strings */; };
+		4CF9B244188241D200315AA7 /* Media_Keys_InstallerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9B243188241D200315AA7 /* Media_Keys_InstallerTests.m */; };
+		4CF9B24E188243EA00315AA7 /* fm.sway.mediakeys.json-template in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */; };
+		4CF9B24F188243EA00315AA7 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B24C188243EA00315AA7 /* install.sh */; };
+		4CF9B250188243EA00315AA7 /* mediakeys in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B24D188243EA00315AA7 /* mediakeys */; };
+		4CF9B25218824CA000315AA7 /* sway512.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B25118824CA000315AA7 /* sway512.png */; };
+		4CF9B25418824E1800315AA7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF9B25318824E1800315AA7 /* Security.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CF9B23B188241D200315AA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CBD86D61870E1C100C40B72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CF9B218188241D100315AA7;
+			remoteInfo = "Media Keys Installer";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4CBD86DC1870E1C100C40B72 /* CopyFiles */ = {
@@ -46,6 +72,29 @@
 		4CBD86FA1870E7CB00C40B72 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		4CBD86FC1870E7F300C40B72 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		4CBD86FE1870E81100C40B72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4CF9B219188241D100315AA7 /* Media Keys Installer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Media Keys Installer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF9B21C188241D100315AA7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4CF9B21D188241D100315AA7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4CF9B21E188241D100315AA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4CF9B221188241D200315AA7 /* Media Keys Installer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Media Keys Installer-Info.plist"; sourceTree = "<group>"; };
+		4CF9B223188241D200315AA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CF9B225188241D200315AA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4CF9B227188241D200315AA7 /* Media Keys Installer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Media Keys Installer-Prefix.pch"; sourceTree = "<group>"; };
+		4CF9B229188241D200315AA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4CF9B22B188241D200315AA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4CF9B22C188241D200315AA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4CF9B22F188241D200315AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4CF9B231188241D200315AA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4CF9B237188241D200315AA7 /* Media Keys InstallerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Media Keys InstallerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF9B238188241D200315AA7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		4CF9B23F188241D200315AA7 /* Media Keys InstallerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Media Keys InstallerTests-Info.plist"; sourceTree = "<group>"; };
+		4CF9B241188241D200315AA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CF9B243188241D200315AA7 /* Media_Keys_InstallerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Media_Keys_InstallerTests.m; sourceTree = "<group>"; };
+		4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fm.sway.mediakeys.json-template"; sourceTree = "<group>"; };
+		4CF9B24C188243EA00315AA7 /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
+		4CF9B24D188243EA00315AA7 /* mediakeys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mediakeys; sourceTree = "<group>"; };
+		4CF9B25118824CA000315AA7 /* sway512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sway512.png; sourceTree = "<group>"; };
+		4CF9B25318824E1800315AA7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +110,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CF9B216188241D100315AA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF9B25418824E1800315AA7 /* Security.framework in Frameworks */,
+				4CF9B21A188241D100315AA7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CF9B234188241D200315AA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF9B23A188241D200315AA7 /* Cocoa.framework in Frameworks */,
+				4CF9B239188241D200315AA7 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -68,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				4CBD86E31870E1C100C40B72 /* Media Keys Handler */,
+				4CF9B21F188241D100315AA7 /* Media Keys Installer */,
+				4CF9B23D188241D200315AA7 /* Media Keys InstallerTests */,
 				4CBD86E01870E1C100C40B72 /* Frameworks */,
 				4CBD86DF1870E1C100C40B72 /* Products */,
 			);
@@ -77,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				4CBD86DE1870E1C100C40B72 /* Media Keys Handler */,
+				4CF9B219188241D100315AA7 /* Media Keys Installer.app */,
+				4CF9B237188241D200315AA7 /* Media Keys InstallerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,11 +155,14 @@
 		4CBD86E01870E1C100C40B72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CF9B25318824E1800315AA7 /* Security.framework */,
 				4CBD86FE1870E81100C40B72 /* Cocoa.framework */,
 				4CBD86FC1870E7F300C40B72 /* IOKit.framework */,
 				4CBD86FA1870E7CB00C40B72 /* Carbon.framework */,
 				4CBD86F81870E7BB00C40B72 /* ApplicationServices.framework */,
 				4CBD86E11870E1C100C40B72 /* Foundation.framework */,
+				4CF9B238188241D200315AA7 /* XCTest.framework */,
+				4CF9B21B188241D100315AA7 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,6 +190,62 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4CF9B21B188241D100315AA7 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CF9B21C188241D100315AA7 /* AppKit.framework */,
+				4CF9B21D188241D100315AA7 /* CoreData.framework */,
+				4CF9B21E188241D100315AA7 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4CF9B21F188241D100315AA7 /* Media Keys Installer */ = {
+			isa = PBXGroup;
+			children = (
+				4CF9B22B188241D200315AA7 /* AppDelegate.h */,
+				4CF9B22C188241D200315AA7 /* AppDelegate.m */,
+				4CF9B22E188241D200315AA7 /* MainMenu.xib */,
+				4CF9B25118824CA000315AA7 /* sway512.png */,
+				4CF9B231188241D200315AA7 /* Images.xcassets */,
+				4CF9B220188241D200315AA7 /* Supporting Files */,
+			);
+			path = "Media Keys Installer";
+			sourceTree = "<group>";
+		};
+		4CF9B220188241D200315AA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */,
+				4CF9B24C188243EA00315AA7 /* install.sh */,
+				4CF9B24D188243EA00315AA7 /* mediakeys */,
+				4CF9B221188241D200315AA7 /* Media Keys Installer-Info.plist */,
+				4CF9B222188241D200315AA7 /* InfoPlist.strings */,
+				4CF9B225188241D200315AA7 /* main.m */,
+				4CF9B227188241D200315AA7 /* Media Keys Installer-Prefix.pch */,
+				4CF9B228188241D200315AA7 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CF9B23D188241D200315AA7 /* Media Keys InstallerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CF9B243188241D200315AA7 /* Media_Keys_InstallerTests.m */,
+				4CF9B23E188241D200315AA7 /* Supporting Files */,
+			);
+			path = "Media Keys InstallerTests";
+			sourceTree = "<group>";
+		};
+		4CF9B23E188241D200315AA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CF9B23F188241D200315AA7 /* Media Keys InstallerTests-Info.plist */,
+				4CF9B240188241D200315AA7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +266,41 @@
 			productReference = 4CBD86DE1870E1C100C40B72 /* Media Keys Handler */;
 			productType = "com.apple.product-type.tool";
 		};
+		4CF9B218188241D100315AA7 /* Media Keys Installer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CF9B245188241D200315AA7 /* Build configuration list for PBXNativeTarget "Media Keys Installer" */;
+			buildPhases = (
+				4CF9B215188241D100315AA7 /* Sources */,
+				4CF9B216188241D100315AA7 /* Frameworks */,
+				4CF9B217188241D100315AA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Media Keys Installer";
+			productName = "Media Keys Installer";
+			productReference = 4CF9B219188241D100315AA7 /* Media Keys Installer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CF9B236188241D200315AA7 /* Media Keys InstallerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CF9B248188241D200315AA7 /* Build configuration list for PBXNativeTarget "Media Keys InstallerTests" */;
+			buildPhases = (
+				4CF9B233188241D200315AA7 /* Sources */,
+				4CF9B234188241D200315AA7 /* Frameworks */,
+				4CF9B235188241D200315AA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CF9B23C188241D200315AA7 /* PBXTargetDependency */,
+			);
+			name = "Media Keys InstallerTests";
+			productName = "Media Keys InstallerTests";
+			productReference = 4CF9B237188241D200315AA7 /* Media Keys InstallerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -144,6 +309,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Michael Feldstein";
+				TargetAttributes = {
+					4CF9B236188241D200315AA7 = {
+						TestTargetID = 4CF9B218188241D100315AA7;
+					};
+				};
 			};
 			buildConfigurationList = 4CBD86D91870E1C100C40B72 /* Build configuration list for PBXProject "Media Keys Handler" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -151,6 +321,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4CBD86D51870E1C100C40B72;
 			productRefGroup = 4CBD86DF1870E1C100C40B72 /* Products */;
@@ -158,9 +329,37 @@
 			projectRoot = "";
 			targets = (
 				4CBD86DD1870E1C100C40B72 /* Media Keys Handler */,
+				4CF9B218188241D100315AA7 /* Media Keys Installer */,
+				4CF9B236188241D200315AA7 /* Media Keys InstallerTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CF9B217188241D100315AA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF9B224188241D200315AA7 /* InfoPlist.strings in Resources */,
+				4CF9B232188241D200315AA7 /* Images.xcassets in Resources */,
+				4CF9B25218824CA000315AA7 /* sway512.png in Resources */,
+				4CF9B22A188241D200315AA7 /* Credits.rtf in Resources */,
+				4CF9B230188241D200315AA7 /* MainMenu.xib in Resources */,
+				4CF9B250188243EA00315AA7 /* mediakeys in Resources */,
+				4CF9B24F188243EA00315AA7 /* install.sh in Resources */,
+				4CF9B24E188243EA00315AA7 /* fm.sway.mediakeys.json-template in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CF9B235188241D200315AA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF9B242188241D200315AA7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CBD86DA1870E1C100C40B72 /* Sources */ = {
@@ -173,7 +372,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CF9B215188241D100315AA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF9B22D188241D200315AA7 /* AppDelegate.m in Sources */,
+				4CF9B226188241D200315AA7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CF9B233188241D200315AA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF9B244188241D200315AA7 /* Media_Keys_InstallerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CF9B23C188241D200315AA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CF9B218188241D100315AA7 /* Media Keys Installer */;
+			targetProxy = 4CF9B23B188241D200315AA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CF9B222188241D200315AA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CF9B223188241D200315AA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4CF9B228188241D200315AA7 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CF9B229188241D200315AA7 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4CF9B22E188241D200315AA7 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CF9B22F188241D200315AA7 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4CF9B240188241D200315AA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CF9B241188241D200315AA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4CBD86EA1870E1C100C40B72 /* Debug */ = {
@@ -264,6 +523,76 @@
 			};
 			name = Release;
 		};
+		4CF9B246188241D200315AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Media Keys Installer/Media Keys Installer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Media Keys Installer/Media Keys Installer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4CF9B247188241D200315AA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Media Keys Installer/Media Keys Installer-Prefix.pch";
+				INFOPLIST_FILE = "Media Keys Installer/Media Keys Installer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4CF9B249188241D200315AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Media Keys Installer.app/Contents/MacOS/Media Keys Installer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Media Keys Installer/Media Keys Installer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Media Keys InstallerTests/Media Keys InstallerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4CF9B24A188241D200315AA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Media Keys Installer.app/Contents/MacOS/Media Keys Installer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Media Keys Installer/Media Keys Installer-Prefix.pch";
+				INFOPLIST_FILE = "Media Keys InstallerTests/Media Keys InstallerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -284,6 +613,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4CF9B245188241D200315AA7 /* Build configuration list for PBXNativeTarget "Media Keys Installer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CF9B246188241D200315AA7 /* Debug */,
+				4CF9B247188241D200315AA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4CF9B248188241D200315AA7 /* Build configuration list for PBXNativeTarget "Media Keys InstallerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CF9B249188241D200315AA7 /* Debug */,
+				4CF9B24A188241D200315AA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

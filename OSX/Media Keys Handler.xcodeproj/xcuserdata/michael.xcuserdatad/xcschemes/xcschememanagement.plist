@@ -9,10 +9,25 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Media Keys Installer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>4CBD86DD1870E1C100C40B72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CF9B218188241D100315AA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CF9B236188241D200315AA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
