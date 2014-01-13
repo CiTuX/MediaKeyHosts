@@ -27,7 +27,6 @@ int main(int argc, const char * argv[])
         [delegate release];
         [keyTap release];
         [loop release];
-        NSLog(@"Doneeeeee");
     }
     return 0;
 }

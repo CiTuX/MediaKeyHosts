@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C9DC44F1883B78B004EFF08 /* mediakeys in Resources */ = {isa = PBXBuildFile; fileRef = 4C9DC44E1883B78B004EFF08 /* mediakeys */; };
 		4C9DC4551883CE2A004EFF08 /* StdinListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9DC4541883CE2A004EFF08 /* StdinListener.m */; };
 		4CBD86E21870E1C100C40B72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86E11870E1C100C40B72 /* Foundation.framework */; };
 		4CBD86E51870E1C100C40B72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD86E41870E1C100C40B72 /* main.m */; };
@@ -18,6 +17,8 @@
 		4CBD86FB1870E7CB00C40B72 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FA1870E7CB00C40B72 /* Carbon.framework */; };
 		4CBD86FD1870E7F300C40B72 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FC1870E7F300C40B72 /* IOKit.framework */; };
 		4CBD86FF1870E81100C40B72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FE1870E81100C40B72 /* Cocoa.framework */; };
+		4CC36FDE1883D3CA00CA7163 /* allset.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC36FDC1883D3CA00CA7163 /* allset.png */; };
+		4CC36FDF1883D3CA00CA7163 /* allset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC36FDD1883D3CA00CA7163 /* allset@2x.png */; };
 		4CF9B21A188241D100315AA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FE1870E81100C40B72 /* Cocoa.framework */; };
 		4CF9B224188241D200315AA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B222188241D200315AA7 /* InfoPlist.strings */; };
 		4CF9B226188241D200315AA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9B225188241D200315AA7 /* main.m */; };
@@ -36,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4CC36FE01883D48800CA7163 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CBD86D61870E1C100C40B72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CBD86DD1870E1C100C40B72;
+			remoteInfo = "Media Keys Handler";
+		};
 		4CF9B23B188241D200315AA7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4CBD86D61870E1C100C40B72 /* Project object */;
@@ -59,7 +67,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4C9DC44E1883B78B004EFF08 /* mediakeys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mediakeys; sourceTree = "<group>"; };
 		4C9DC4531883CE2A004EFF08 /* StdinListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdinListener.h; sourceTree = "<group>"; };
 		4C9DC4541883CE2A004EFF08 /* StdinListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StdinListener.m; sourceTree = "<group>"; };
 		4CBD86DE1870E1C100C40B72 /* Media Keys Handler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Media Keys Handler"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +83,8 @@
 		4CBD86FA1870E7CB00C40B72 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		4CBD86FC1870E7F300C40B72 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		4CBD86FE1870E81100C40B72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4CC36FDC1883D3CA00CA7163 /* allset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = allset.png; path = Images.xcassets/allset.imageset/allset.png; sourceTree = "<group>"; };
+		4CC36FDD1883D3CA00CA7163 /* allset@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "allset@2x.png"; path = "Images.xcassets/allset.imageset/allset@2x.png"; sourceTree = "<group>"; };
 		4CF9B219188241D100315AA7 /* Media Keys Installer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Media Keys Installer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF9B21C188241D100315AA7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		4CF9B21D188241D100315AA7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -208,6 +217,8 @@
 		4CF9B21F188241D100315AA7 /* Media Keys Installer */ = {
 			isa = PBXGroup;
 			children = (
+				4CC36FDC1883D3CA00CA7163 /* allset.png */,
+				4CC36FDD1883D3CA00CA7163 /* allset@2x.png */,
 				4CF9B22B188241D200315AA7 /* AppDelegate.h */,
 				4CF9B22C188241D200315AA7 /* AppDelegate.m */,
 				4CF9B22E188241D200315AA7 /* MainMenu.xib */,
@@ -221,7 +232,6 @@
 		4CF9B220188241D200315AA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C9DC44E1883B78B004EFF08 /* mediakeys */,
 				4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */,
 				4CF9B24C188243EA00315AA7 /* install.sh */,
 				4CF9B221188241D200315AA7 /* Media Keys Installer-Info.plist */,
@@ -282,6 +292,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4CC36FE11883D48800CA7163 /* PBXTargetDependency */,
 			);
 			name = "Media Keys Installer";
 			productName = "Media Keys Installer";
@@ -345,12 +356,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC36FDE1883D3CA00CA7163 /* allset.png in Resources */,
+				4CC36FDF1883D3CA00CA7163 /* allset@2x.png in Resources */,
 				4CF9B224188241D200315AA7 /* InfoPlist.strings in Resources */,
 				4CF9B232188241D200315AA7 /* Images.xcassets in Resources */,
 				4CF9B25218824CA000315AA7 /* sway512.png in Resources */,
 				4CF9B22A188241D200315AA7 /* Credits.rtf in Resources */,
 				4CF9B230188241D200315AA7 /* MainMenu.xib in Resources */,
-				4C9DC44F1883B78B004EFF08 /* mediakeys in Resources */,
 				4CF9B24F188243EA00315AA7 /* install.sh in Resources */,
 				4CF9B24E188243EA00315AA7 /* fm.sway.mediakeys.json-template in Resources */,
 			);
@@ -398,6 +410,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4CC36FE11883D48800CA7163 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CBD86DD1870E1C100C40B72 /* Media Keys Handler */;
+			targetProxy = 4CC36FE01883D48800CA7163 /* PBXContainerItemProxy */;
+		};
 		4CF9B23C188241D200315AA7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4CF9B218188241D100315AA7 /* Media Keys Installer */;
@@ -474,6 +491,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = mediakeys;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -505,6 +523,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = mediakeys;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -515,7 +534,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Media Keys Handler/Media Keys Handler-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = mediakeys;
 			};
 			name = Debug;
 		};
@@ -525,7 +544,7 @@
 				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Media Keys Handler/Media Keys Handler-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = mediakeys;
 			};
 			name = Release;
 		};

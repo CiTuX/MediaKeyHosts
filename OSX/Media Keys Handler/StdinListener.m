@@ -22,13 +22,8 @@
 
 - (void)dataRead:(NSNotification*)notification
 {
-    NSData *data = [[notification userInfo] objectForKey:@"NSFileHandleNotificationDataItem"];
-    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"STring '%@'", string);
-
-    NSLog(@"Done");
-    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
-    int processID = [processInfo processIdentifier];
+    // Currently the only message we get sent is a quit message
+    // No need to check what it was yet...
     exit(0);
 }
 
