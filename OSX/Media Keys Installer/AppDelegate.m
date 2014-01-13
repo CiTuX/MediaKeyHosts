@@ -71,19 +71,42 @@
         args,
         &fpStdout
     );
+    
     bool success = (status == errAuthorizationSuccess);
     pid_t newProcId;
     if (success)
     {
-        // Get the new process id
-        newProcId = fcntl(fileno(fpStdout), F_GETOWN, 0);
-        fclose(fpStdout);
+        int commPipeFD = fileno(fpStdout);
+        _stdOutOutputHandle = [[NSFileHandle alloc] initWithFileDescriptor:commPipeFD];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataRead:) name:NSFileHandleReadCompletionNotification object:_stdOutOutputHandle];
+        [_stdOutOutputHandle readInBackgroundAndNotify];
+
+        //        // Get the new process id
+//        newProcId = fcntl(fileno(fpStdout), F_GETOWN, 0);
+//        fclose(fpStdout);
     }
     else
     {
         // Notify user of the error ...
     }
     
+}
+
+- (void)dataRead:(NSNotification*)notification {
+    NSData *data = [[notification userInfo] objectForKey:@"NSFileHandleNotificationDataItem"];
+    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    if ([string isEqualToString:@"SUCCESS\n"]) {
+        NSLog(@"SUCCESS!!!");
+        [self.before setHidden:YES];
+        [self.after setHidden:NO];
+        
+    } else {
+        NSLog(@"FAILURE!!!!");
+    }
+}
+
+-(IBAction)quit:(id)sender {
+    [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
 }
 
 @end

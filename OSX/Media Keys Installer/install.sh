@@ -7,3 +7,4 @@ manifestJson=`echo $manifestJson | sed -e "s|%BINARY_PATH%|${binaryPath}|g"`
 mkdir -p /Library/Google/Chrome/NativeMessagingHosts
 echo $manifestJson | tee /Library/Google/Chrome/NativeMessagingHosts/fm.sway.mediakeys.json > /dev/null
 cp "$1/mediakeys" ${binaryPath}
+echo "SUCCESS"

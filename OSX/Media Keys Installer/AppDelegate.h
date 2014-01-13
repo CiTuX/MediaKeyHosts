@@ -8,9 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    NSFileHandle* _stdOutOutputHandle;
+}
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSView *before;
+@property (weak) IBOutlet NSView *after;
 
 -(IBAction)install:(id)sender;
+-(IBAction)quit:(id)sender;
 @end
