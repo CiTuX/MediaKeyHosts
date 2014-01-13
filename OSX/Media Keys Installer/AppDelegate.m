@@ -80,10 +80,6 @@
         _stdOutOutputHandle = [[NSFileHandle alloc] initWithFileDescriptor:commPipeFD];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataRead:) name:NSFileHandleReadCompletionNotification object:_stdOutOutputHandle];
         [_stdOutOutputHandle readInBackgroundAndNotify];
-
-        //        // Get the new process id
-//        newProcId = fcntl(fileno(fpStdout), F_GETOWN, 0);
-//        fclose(fpStdout);
     }
     else
     {

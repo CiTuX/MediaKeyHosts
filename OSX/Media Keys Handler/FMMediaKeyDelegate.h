@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface FMMediaKeyDelegate : NSObject
-
+- (void) sendMessage:(NSString*)msg;
 @end

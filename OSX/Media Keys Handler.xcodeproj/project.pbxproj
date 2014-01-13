@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C9DC44F1883B78B004EFF08 /* mediakeys in Resources */ = {isa = PBXBuildFile; fileRef = 4C9DC44E1883B78B004EFF08 /* mediakeys */; };
+		4C9DC4551883CE2A004EFF08 /* StdinListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9DC4541883CE2A004EFF08 /* StdinListener.m */; };
 		4CBD86E21870E1C100C40B72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86E11870E1C100C40B72 /* Foundation.framework */; };
 		4CBD86E51870E1C100C40B72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD86E41870E1C100C40B72 /* main.m */; };
 		4CBD86E91870E1C100C40B72 /* Media_Keys_Handler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4CBD86E81870E1C100C40B72 /* Media_Keys_Handler.1 */; };
@@ -29,7 +31,6 @@
 		4CF9B244188241D200315AA7 /* Media_Keys_InstallerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9B243188241D200315AA7 /* Media_Keys_InstallerTests.m */; };
 		4CF9B24E188243EA00315AA7 /* fm.sway.mediakeys.json-template in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */; };
 		4CF9B24F188243EA00315AA7 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B24C188243EA00315AA7 /* install.sh */; };
-		4CF9B250188243EA00315AA7 /* mediakeys in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B24D188243EA00315AA7 /* mediakeys */; };
 		4CF9B25218824CA000315AA7 /* sway512.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B25118824CA000315AA7 /* sway512.png */; };
 		4CF9B25418824E1800315AA7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF9B25318824E1800315AA7 /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C9DC44E1883B78B004EFF08 /* mediakeys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mediakeys; sourceTree = "<group>"; };
+		4C9DC4531883CE2A004EFF08 /* StdinListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdinListener.h; sourceTree = "<group>"; };
+		4C9DC4541883CE2A004EFF08 /* StdinListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StdinListener.m; sourceTree = "<group>"; };
 		4CBD86DE1870E1C100C40B72 /* Media Keys Handler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Media Keys Handler"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBD86E11870E1C100C40B72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CBD86E41870E1C100C40B72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,7 +96,6 @@
 		4CF9B243188241D200315AA7 /* Media_Keys_InstallerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Media_Keys_InstallerTests.m; sourceTree = "<group>"; };
 		4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fm.sway.mediakeys.json-template"; sourceTree = "<group>"; };
 		4CF9B24C188243EA00315AA7 /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
-		4CF9B24D188243EA00315AA7 /* mediakeys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = mediakeys; sourceTree = "<group>"; };
 		4CF9B25118824CA000315AA7 /* sway512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sway512.png; sourceTree = "<group>"; };
 		4CF9B25318824E1800315AA7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -178,6 +181,8 @@
 				4CBD86E61870E1C100C40B72 /* Supporting Files */,
 				4CBD86F51870E5FA00C40B72 /* FMMediaKeyDelegate.h */,
 				4CBD86F61870E5FA00C40B72 /* FMMediaKeyDelegate.m */,
+				4C9DC4531883CE2A004EFF08 /* StdinListener.h */,
+				4C9DC4541883CE2A004EFF08 /* StdinListener.m */,
 			);
 			path = "Media Keys Handler";
 			sourceTree = "<group>";
@@ -216,9 +221,9 @@
 		4CF9B220188241D200315AA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C9DC44E1883B78B004EFF08 /* mediakeys */,
 				4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */,
 				4CF9B24C188243EA00315AA7 /* install.sh */,
-				4CF9B24D188243EA00315AA7 /* mediakeys */,
 				4CF9B221188241D200315AA7 /* Media Keys Installer-Info.plist */,
 				4CF9B222188241D200315AA7 /* InfoPlist.strings */,
 				4CF9B225188241D200315AA7 /* main.m */,
@@ -345,7 +350,7 @@
 				4CF9B25218824CA000315AA7 /* sway512.png in Resources */,
 				4CF9B22A188241D200315AA7 /* Credits.rtf in Resources */,
 				4CF9B230188241D200315AA7 /* MainMenu.xib in Resources */,
-				4CF9B250188243EA00315AA7 /* mediakeys in Resources */,
+				4C9DC44F1883B78B004EFF08 /* mediakeys in Resources */,
 				4CF9B24F188243EA00315AA7 /* install.sh in Resources */,
 				4CF9B24E188243EA00315AA7 /* fm.sway.mediakeys.json-template in Resources */,
 			);
@@ -368,6 +373,7 @@
 			files = (
 				4CBD86E51870E1C100C40B72 /* main.m in Sources */,
 				4CBD86F71870E5FA00C40B72 /* FMMediaKeyDelegate.m in Sources */,
+				4C9DC4551883CE2A004EFF08 /* StdinListener.m in Sources */,
 				4CBD86F31870E55900C40B72 /* SPMediaKeyTap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +627,7 @@
 				4CF9B247188241D200315AA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CF9B248188241D200315AA7 /* Build configuration list for PBXNativeTarget "Media Keys InstallerTests" */ = {
 			isa = XCConfigurationList;
@@ -629,6 +636,7 @@
 				4CF9B24A188241D200315AA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
