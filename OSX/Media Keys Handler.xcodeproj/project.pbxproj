@@ -19,6 +19,7 @@
 		4CBD86FF1870E81100C40B72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FE1870E81100C40B72 /* Cocoa.framework */; };
 		4CC36FDE1883D3CA00CA7163 /* allset.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC36FDC1883D3CA00CA7163 /* allset.png */; };
 		4CC36FDF1883D3CA00CA7163 /* allset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CC36FDD1883D3CA00CA7163 /* allset@2x.png */; };
+		4CDCD90718935894005F8874 /* mediakeys in Resources */ = {isa = PBXBuildFile; fileRef = 4CBD86DE1870E1C100C40B72 /* mediakeys */; };
 		4CF9B21A188241D100315AA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBD86FE1870E81100C40B72 /* Cocoa.framework */; };
 		4CF9B224188241D200315AA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B222188241D200315AA7 /* InfoPlist.strings */; };
 		4CF9B226188241D200315AA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9B225188241D200315AA7 /* main.m */; };
@@ -68,7 +69,7 @@
 /* Begin PBXFileReference section */
 		4C9DC4531883CE2A004EFF08 /* StdinListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdinListener.h; sourceTree = "<group>"; };
 		4C9DC4541883CE2A004EFF08 /* StdinListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StdinListener.m; sourceTree = "<group>"; };
-		4CBD86DE1870E1C100C40B72 /* Media Keys Handler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Media Keys Handler"; path = mediakeys; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBD86DE1870E1C100C40B72 /* mediakeys */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mediakeys; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBD86E11870E1C100C40B72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CBD86E41870E1C100C40B72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CBD86E71870E1C100C40B72 /* Media Keys Handler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Media Keys Handler-Prefix.pch"; sourceTree = "<group>"; };
@@ -155,7 +156,7 @@
 		4CBD86DF1870E1C100C40B72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CBD86DE1870E1C100C40B72 /* Media Keys Handler */,
+				4CBD86DE1870E1C100C40B72 /* mediakeys */,
 				4CF9B219188241D100315AA7 /* Media Keys Installer.app */,
 				4CF9B237188241D200315AA7 /* Media Keys InstallerTests.xctest */,
 			);
@@ -275,7 +276,7 @@
 			);
 			name = "Media Keys Handler";
 			productName = "Media Keys Handler";
-			productReference = 4CBD86DE1870E1C100C40B72 /* Media Keys Handler */;
+			productReference = 4CBD86DE1870E1C100C40B72 /* mediakeys */;
 			productType = "com.apple.product-type.tool";
 		};
 		4CF9B218188241D100315AA7 /* Media Keys Installer */ = {
@@ -361,6 +362,7 @@
 				4CF9B22A188241D200315AA7 /* Credits.rtf in Resources */,
 				4CF9B230188241D200315AA7 /* MainMenu.xib in Resources */,
 				4CF9B24E188243EA00315AA7 /* fm.sway.mediakeys.json-template in Resources */,
+				4CDCD90718935894005F8874 /* mediakeys in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

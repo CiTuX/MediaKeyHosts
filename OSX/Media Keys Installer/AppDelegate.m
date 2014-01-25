@@ -27,6 +27,9 @@
     NSString* binPath = [bundle pathForResource:@"mediakeys" ofType:@""];
     NSString* binDest = [hostsDir stringByAppendingString:@"/mediakeys"];
     [[NSFileManager defaultManager] copyItemAtPath:binPath toPath:binDest error:&error];
+    
+    [self.before setHidden:YES];
+    [self.after setHidden:NO];
 }
 
 -(IBAction)quit:(id)sender {
