@@ -31,7 +31,6 @@
 		4CF9B242188241D200315AA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B240188241D200315AA7 /* InfoPlist.strings */; };
 		4CF9B244188241D200315AA7 /* Media_Keys_InstallerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9B243188241D200315AA7 /* Media_Keys_InstallerTests.m */; };
 		4CF9B24E188243EA00315AA7 /* fm.sway.mediakeys.json-template in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */; };
-		4CF9B24F188243EA00315AA7 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B24C188243EA00315AA7 /* install.sh */; };
 		4CF9B25218824CA000315AA7 /* sway512.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9B25118824CA000315AA7 /* sway512.png */; };
 		4CF9B25418824E1800315AA7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF9B25318824E1800315AA7 /* Security.framework */; };
 /* End PBXBuildFile section */
@@ -69,7 +68,7 @@
 /* Begin PBXFileReference section */
 		4C9DC4531883CE2A004EFF08 /* StdinListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StdinListener.h; sourceTree = "<group>"; };
 		4C9DC4541883CE2A004EFF08 /* StdinListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StdinListener.m; sourceTree = "<group>"; };
-		4CBD86DE1870E1C100C40B72 /* Media Keys Handler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Media Keys Handler"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CBD86DE1870E1C100C40B72 /* Media Keys Handler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Media Keys Handler"; path = mediakeys; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBD86E11870E1C100C40B72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CBD86E41870E1C100C40B72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4CBD86E71870E1C100C40B72 /* Media Keys Handler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Media Keys Handler-Prefix.pch"; sourceTree = "<group>"; };
@@ -104,7 +103,6 @@
 		4CF9B241188241D200315AA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CF9B243188241D200315AA7 /* Media_Keys_InstallerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Media_Keys_InstallerTests.m; sourceTree = "<group>"; };
 		4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "fm.sway.mediakeys.json-template"; sourceTree = "<group>"; };
-		4CF9B24C188243EA00315AA7 /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		4CF9B25118824CA000315AA7 /* sway512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sway512.png; sourceTree = "<group>"; };
 		4CF9B25318824E1800315AA7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -233,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				4CF9B24B188243EA00315AA7 /* fm.sway.mediakeys.json-template */,
-				4CF9B24C188243EA00315AA7 /* install.sh */,
 				4CF9B221188241D200315AA7 /* Media Keys Installer-Info.plist */,
 				4CF9B222188241D200315AA7 /* InfoPlist.strings */,
 				4CF9B225188241D200315AA7 /* main.m */,
@@ -363,7 +360,6 @@
 				4CF9B25218824CA000315AA7 /* sway512.png in Resources */,
 				4CF9B22A188241D200315AA7 /* Credits.rtf in Resources */,
 				4CF9B230188241D200315AA7 /* MainMenu.xib in Resources */,
-				4CF9B24F188243EA00315AA7 /* install.sh in Resources */,
 				4CF9B24E188243EA00315AA7 /* fm.sway.mediakeys.json-template in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4CBD86DD1870E1C100C40B72"
-               BuildableName = "Media Keys Handler"
+               BuildableName = "mediakeys"
                BlueprintName = "Media Keys Handler"
                ReferencedContainer = "container:Media Keys Handler.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4CBD86DD1870E1C100C40B72"
-            BuildableName = "Media Keys Handler"
+            BuildableName = "mediakeys"
             BlueprintName = "Media Keys Handler"
             ReferencedContainer = "container:Media Keys Handler.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4CBD86DD1870E1C100C40B72"
-            BuildableName = "Media Keys Handler"
+            BuildableName = "mediakeys"
             BlueprintName = "Media Keys Handler"
             ReferencedContainer = "container:Media Keys Handler.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4CBD86DD1870E1C100C40B72"
-            BuildableName = "Media Keys Handler"
+            BuildableName = "mediakeys"
             BlueprintName = "Media Keys Handler"
             ReferencedContainer = "container:Media Keys Handler.xcodeproj">
          </BuildableReference>

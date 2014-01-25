@@ -14,91 +14,19 @@
 
 - (IBAction)install:(id)sender
 {
-    NSString* installScriptPath = [[NSBundle mainBundle] pathForResource:@"install" ofType:@"sh"];
+    NSBundle* bundle = [NSBundle mainBundle];
+    NSString* manifestPath = [bundle pathForResource:@"fm.sway.mediakeys" ofType:@"json-template"];
+    NSError* error;
+    NSString* libraryDir = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* hostsDir = [libraryDir stringByAppendingString:@"/Google/Chrome/NativeMessagingHosts"];
     
-    NSLog(@"Script Path %@", installScriptPath);
-    NSString* workingDirectory = [installScriptPath stringByDeletingLastPathComponent];
-    NSLog(@"DIR %@", workingDirectory);
-    AuthorizationRef authRef;
-    OSStatus status = AuthorizationCreate(NULL,
-                                          kAuthorizationEmptyEnvironment,
-                                          kAuthorizationFlagDefaults,
-                                          &authRef
-                                          );
-    if (status != errAuthorizationSuccess) {
-        NSLog(@":(");
-    }
-    
-    AuthorizationItem kAuthEnv[1];
-    NSString* iconPathNS = [[NSBundle mainBundle] pathForResource:@"sway512" ofType:@"png"];
-    const char *iconPath = [iconPathNS cStringUsingEncoding:NSASCIIStringEncoding];
-    kAuthEnv[0].name = kAuthorizationEnvironmentIcon;
-    kAuthEnv[0].valueLength = strlen(iconPath);
-    kAuthEnv[0].value = (void *)iconPath; // fully qualified path
-    kAuthEnv[0].flags = 0;
-    AuthorizationEnvironment authorizationEnvironment;
-    authorizationEnvironment.items = kAuthEnv;
-    authorizationEnvironment.count = 1;
-    
-    const char* scriptPath = [installScriptPath cStringUsingEncoding:NSASCIIStringEncoding];
-    AuthorizationItem executeRight = {
-        kAuthorizationRightExecute,
-        strlen(scriptPath),
-        (void*)scriptPath,
-        0
-    };
-    AuthorizationRights rightsSet = {1, &executeRight};
-    AuthorizationFlags flags =
-        kAuthorizationFlagDefaults |
-        kAuthorizationFlagInteractionAllowed |
-        kAuthorizationFlagPreAuthorize |
-        kAuthorizationFlagExtendRights;
-    status = AuthorizationCopyRights(authRef, &rightsSet, &authorizationEnvironment, flags, NULL);
-    if (errAuthorizationCanceled == status) {
-        NSLog(@"Cancelled");
-    } else if (status != errAuthorizationSuccess) {
-        NSLog(@"Error authenticating");
-    }
-    
-    FILE* fpStdout = NULL;
-    char *args[2];
-    args[0] = [workingDirectory cStringUsingEncoding:NSASCIIStringEncoding];
-    args[1] = NULL;
-    status = AuthorizationExecuteWithPrivileges(
-        authRef,
-        (const char*)scriptPath,
-        kAuthorizationFlagDefaults,
-        args,
-        &fpStdout
-    );
-    
-    bool success = (status == errAuthorizationSuccess);
-    pid_t newProcId;
-    if (success)
-    {
-        int commPipeFD = fileno(fpStdout);
-        _stdOutOutputHandle = [[NSFileHandle alloc] initWithFileDescriptor:commPipeFD];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataRead:) name:NSFileHandleReadCompletionNotification object:_stdOutOutputHandle];
-        [_stdOutOutputHandle readInBackgroundAndNotify];
-    }
-    else
-    {
-        // Notify user of the error ...
-    }
-    
-}
-
-- (void)dataRead:(NSNotification*)notification {
-    NSData *data = [[notification userInfo] objectForKey:@"NSFileHandleNotificationDataItem"];
-    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    if ([string isEqualToString:@"SUCCESS\n"]) {
-        NSLog(@"SUCCESS!!!");
-        [self.before setHidden:YES];
-        [self.after setHidden:NO];
-        
-    } else {
-        NSLog(@"FAILURE!!!!");
-    }
+    [[NSFileManager defaultManager] createDirectoryAtPath:hostsDir withIntermediateDirectories:YES attributes:nil error:&error];
+    NSString* manifestContents = [NSString stringWithContentsOfFile:manifestPath encoding:NSASCIIStringEncoding error:NULL];
+    NSString* manifestInstallPath = [hostsDir stringByAppendingString:@"/mediakeys"];
+    manifestContents = [manifestContents stringByReplacingOccurrencesOfString:@"%BINARY_PATH%" withString:manifestInstallPath];
+    NSString* binPath = [bundle pathForResource:@"mediakeys" ofType:@""];
+    NSString* binDest = [hostsDir stringByAppendingString:@"/mediakeys"];
+    [[NSFileManager defaultManager] copyItemAtPath:binPath toPath:binDest error:&error];
 }
 
 -(IBAction)quit:(id)sender {
