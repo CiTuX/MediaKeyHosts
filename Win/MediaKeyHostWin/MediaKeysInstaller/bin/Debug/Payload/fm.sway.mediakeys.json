@@ -1,0 +1,13 @@
+{
+  "name": "fm.sway.mediakeys",
+  "description": "Media Key Host",
+  "path": "MediaKeyHostWin.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://gdmkjgiknmnpnaajhpnhaabdikomfgkk/",
+    "chrome-extension://nmahkjkemnboojdealojindhpbkbomcg/",
+    "chrome-extension://icckhjgjjompfgoiidainoapgjepncej/",
+    "chrome-extension://cdkcplcoknlahmcjdelkehlmknoenkgg/",
+    "chrome-extension://imnkbnklpabhpggfibepeaanlmpdpcdl/"
+  ]
+}

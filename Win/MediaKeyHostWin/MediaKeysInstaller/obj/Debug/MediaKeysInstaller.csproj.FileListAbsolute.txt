@@ -1,0 +1,9 @@
+C:\Users\michael\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeysInstaller\bin\Debug\Payload\fm.sway.mediakeys.json
+C:\Users\michael\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeysInstaller\bin\Debug\MediaKeysInstaller.exe.config
+C:\Users\michael\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeysInstaller\bin\Debug\MediaKeysInstaller.exe
+C:\Users\michael\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeysInstaller\bin\Debug\MediaKeysInstaller.pdb
+C:\Users\michael\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeysInstaller\obj\Debug\WindowsFormsApplication1.InstallerWindow.resources
+C:\Users\michael\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeysInstaller\obj\Debug\MediaKeysInstaller.Properties.Resources.resources
+C:\Users\michael\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeysInstaller\obj\Debug\MediaKeysInstaller.csproj.GenerateResource.Cache
+C:\Users\michael\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeysInstaller\obj\Debug\MediaKeysInstaller.exe
+C:\Users\michael\Documents\GitHub\MediaKeyHosts\Win\MediaKeyHostWin\MediaKeysInstaller\obj\Debug\MediaKeysInstaller.pdb
