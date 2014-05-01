@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Spotify AB
 #import "SPMediaKeyTap.h"
-#import "SPInvocationGrabbing/NSObject+SPInvocationGrabbing.h" // https://gist.github.com/511181, in submodule
+#import "SPInvocationGrabbing/NSObject+SPInvocationGrabbing.h"
 
 @interface SPMediaKeyTap ()
 -(BOOL)shouldInterceptMediaKeyEvents;
@@ -31,13 +31,29 @@ static CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEv
     _tapThreadRL=nil;
     _eventPort=nil;
     _eventPortSource=nil;
+    center = [[NSWorkspace sharedWorkspace] notificationCenter];
+    [center addObserver:self
+               selector:@selector(appDidTerminate:)
+                   name:NSWorkspaceDidTerminateApplicationNotification
+                 object:nil
+     ];
 	return self;
 }
+
+- (void)appDidTerminate:(NSNotification *)notification
+{
+    NSRunningApplication *runApp = [[notification userInfo] valueForKey:@"NSWorkspaceApplicationKey"];
+    if ([[SPMediaKeyTap defaultMediaKeyUserBundleIdentifiers] containsObject:runApp.bundleIdentifier]) {
+        [self setShouldInterceptMediaKeyEvents:YES];
+    }
+}
+
 -(void)dealloc;
 {
 	[self stopWatchingMediaKeys];
 	[self stopWatchingAppSwitching];
 	[_mediaKeyAppList release];
+    [center removeObserver:self];
 	[super dealloc];
 }
 
@@ -112,44 +128,36 @@ static CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEv
 	return NO;
 #else
 	// XXX(nevyn): MediaKey event tap doesn't work on 10.4, feel free to figure out why if you have the energy.
-	return 
-		![[NSUserDefaults standardUserDefaults] boolForKey:kIgnoreMediaKeysDefaultsKey]
-		&& floor(NSAppKitVersionNumber) >= 949/*NSAppKitVersionNumber10_5*/;
+	return
+    ![[NSUserDefaults standardUserDefaults] boolForKey:kIgnoreMediaKeysDefaultsKey]
+    && floor(NSAppKitVersionNumber) >= 949/*NSAppKitVersionNumber10_5*/;
 #endif
 }
 
 + (NSArray*)defaultMediaKeyUserBundleIdentifiers;
 {
 	return [NSArray arrayWithObjects:
-		[[NSBundle mainBundle] bundleIdentifier], // your app
-		@"com.spotify.client",
-		@"com.apple.iTunes",
-		@"com.apple.QuickTimePlayerX",
-		@"com.apple.quicktimeplayer",
-		@"com.apple.iWork.Keynote",
-		@"com.apple.iPhoto",
-		@"org.videolan.vlc",
-		@"com.apple.Aperture",
-		@"com.plexsquared.Plex",
-		@"com.soundcloud.desktop",
-		@"org.niltsh.MPlayerX",
-		@"com.ilabs.PandorasHelper",
-		@"com.mahasoftware.pandabar",
-		@"com.bitcartel.pandorajam",
-		@"org.clementine-player.clementine",
-		@"fm.last.Last.fm",
-		@"fm.last.Scrobbler",
-		@"com.beatport.BeatportPro",
-		@"com.Timenut.SongKey",
-		@"com.macromedia.fireworks", // the tap messes up their mouse input
-		@"at.justp.Theremin",
-		@"ru.ya.themblsha.YandexMusic",
-		@"com.jriver.MediaCenter18",
-		@"com.jriver.MediaCenter19",
-		@"com.jriver.MediaCenter20",
-		@"co.rackit.mate",
-		nil
-	];
+            [[NSBundle mainBundle] bundleIdentifier], // your app
+            @"com.spotify.client",
+            @"com.apple.iTunes",
+            @"com.apple.QuickTimePlayerX",
+            @"com.apple.quicktimeplayer",
+            @"com.apple.iWork.Keynote",
+            @"org.videolan.vlc",
+            @"com.apple.Aperture",
+            @"com.plexsquared.Plex",
+            @"com.soundcloud.desktop",
+            @"org.niltsh.MPlayerX",
+            @"com.ilabs.PandorasHelper",
+            @"com.mahasoftware.pandabar",
+            @"com.bitcartel.pandorajam",
+            @"org.clementine-player.clementine",
+            @"fm.last.Last.fm",
+            @"com.beatport.BeatportPro",
+            @"com.Timenut.SongKey",
+            @"com.macromedia.fireworks", // the tap messes up their mouse input
+            nil
+            ];
 }
 
 
@@ -181,7 +189,7 @@ static CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEv
 	}
 }
 
-#pragma mark 
+#pragma mark
 #pragma mark -
 #pragma mark Event tap callbacks
 
@@ -190,9 +198,8 @@ static CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEv
 static CGEventRef tapEventCallback2(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon)
 {
 	SPMediaKeyTap *self = refcon;
-
+    
     if(type == kCGEventTapDisabledByTimeout) {
-		NSLog(@"Media key event tap was disabled by timeout");
 		CGEventTapEnable(self->_eventPort, TRUE);
 		return event;
 	} else if(type == kCGEventTapDisabledByUserInput) {
@@ -208,14 +215,14 @@ static CGEventRef tapEventCallback2(CGEventTapProxy proxy, CGEventType type, CGE
 		assert(0);
 		return event;
 	}
-
+    
 	if (type != NX_SYSDEFINED || [nsEvent subtype] != SPSystemDefinedEventMediaKeys)
 		return event;
-
+    
 	int keyCode = (([nsEvent data1] & 0xFFFF0000) >> 16);
     if (keyCode != NX_KEYTYPE_PLAY && keyCode != NX_KEYTYPE_FAST && keyCode != NX_KEYTYPE_REWIND && keyCode != NX_KEYTYPE_PREVIOUS && keyCode != NX_KEYTYPE_NEXT)
 		return event;
-
+    
 	if (![self shouldInterceptMediaKeyEvents])
 		return event;
 	
@@ -258,42 +265,44 @@ NSString *kIgnoreMediaKeysDefaultsKey = @"SPIgnoreMediaKeys";
 
 -(void)mediaKeyAppListChanged;
 {
-	if([_mediaKeyAppList count] == 0) return;
-	
-	/*NSLog(@"--");
-	int i = 0;
-	for (NSValue *psnv in _mediaKeyAppList) {
-		ProcessSerialNumber psn; [psnv getValue:&psn];
-		NSDictionary *processInfo = [(id)ProcessInformationCopyDictionary(
-			&psn,
-			kProcessDictionaryIncludeAllInformationMask
-		) autorelease];
-		NSString *bundleIdentifier = [processInfo objectForKey:(id)kCFBundleIdentifierKey];
-		NSLog(@"%d: %@", i++, bundleIdentifier);
-	}*/
+	if([_mediaKeyAppList count] == 0) {
+        [self setShouldInterceptMediaKeyEvents:true];
+        return;
+    }
+    //	NSLog(@"--");
+    //	int i = 0;
+    //	for (NSValue *psnv in _mediaKeyAppList) {
+    //		ProcessSerialNumber psn; [psnv getValue:&psn];
+    //		NSDictionary *processInfo = [(id)ProcessInformationCopyDictionary(
+    //			&psn,
+    //			kProcessDictionaryIncludeAllInformationMask
+    //		) autorelease];
+    //		NSString *bundleIdentifier = [processInfo objectForKey:(id)kCFBundleIdentifierKey];
+    //		NSLog(@"%d: %@", i++, bundleIdentifier);
+    //	}
 	
     ProcessSerialNumber mySerial, topSerial;
 	GetCurrentProcess(&mySerial);
 	[[_mediaKeyAppList objectAtIndex:0] getValue:&topSerial];
-
+    
 	Boolean same;
 	OSErr err = SameProcess(&mySerial, &topSerial, &same);
-	[self setShouldInterceptMediaKeyEvents:(err == noErr && same)];	
-
+	[self setShouldInterceptMediaKeyEvents:(err == noErr && same)];
+    
 }
 -(void)appIsNowFrontmost:(ProcessSerialNumber)psn;
 {
 	NSValue *psnv = [NSValue valueWithBytes:&psn objCType:@encode(ProcessSerialNumber)];
 	
 	NSDictionary *processInfo = [(id)ProcessInformationCopyDictionary(
-		&psn,
-		kProcessDictionaryIncludeAllInformationMask
-	) autorelease];
+                                                                      &psn,
+                                                                      kProcessDictionaryIncludeAllInformationMask
+                                                                      ) autorelease];
 	NSString *bundleIdentifier = [processInfo objectForKey:(id)kCFBundleIdentifierKey];
-
-	NSArray *whitelistIdentifiers = [[NSUserDefaults standardUserDefaults] arrayForKey:kMediaKeyUsingBundleIdentifiersDefaultsKey];
+    
+	NSArray *whitelistIdentifiers = [SPMediaKeyTap defaultMediaKeyUserBundleIdentifiers];
 	if(![whitelistIdentifiers containsObject:bundleIdentifier]) return;
-
+    
 	[_mediaKeyAppList removeObject:psnv];
 	[_mediaKeyAppList insertObject:psnv atIndex:0];
 	[self mediaKeyAppListChanged];
@@ -301,6 +310,15 @@ NSString *kIgnoreMediaKeysDefaultsKey = @"SPIgnoreMediaKeys";
 -(void)appTerminated:(ProcessSerialNumber)psn;
 {
 	NSValue *psnv = [NSValue valueWithBytes:&psn objCType:@encode(ProcessSerialNumber)];
+	NSDictionary *processInfo = [(id)ProcessInformationCopyDictionary(
+                                                                      &psn,
+                                                                      kProcessDictionaryIncludeAllInformationMask
+                                                                      ) autorelease];
+	NSString *bundleIdentifier = [processInfo objectForKey:(id)kCFBundleIdentifierKey];
+    NSArray *whitelistIdentifiers = [SPMediaKeyTap defaultMediaKeyUserBundleIdentifiers];
+	if([whitelistIdentifiers containsObject:bundleIdentifier]) {
+        [self setShouldInterceptMediaKeyEvents:YES];
+    }
 	[_mediaKeyAppList removeObject:psnv];
 	[self mediaKeyAppListChanged];
 }
@@ -313,26 +331,25 @@ static pascal OSStatus appSwitched (EventHandlerCallRef nextHandler, EventRef ev
     GetFrontProcess(&newSerial);
 	
 	[self appIsNowFrontmost:newSerial];
-		
     return CallNextEventHandler(nextHandler, evt);
 }
 
 static pascal OSStatus appTerminated (EventHandlerCallRef nextHandler, EventRef evt, void* userData)
 {
 	SPMediaKeyTap *self = (id)userData;
-	
+
 	ProcessSerialNumber deadPSN;
-
+    
 	GetEventParameter(
-		evt, 
-		kEventParamProcessID, 
-		typeProcessSerialNumber, 
-		NULL, 
-		sizeof(deadPSN), 
-		NULL, 
-		&deadPSN
-	);
-
+                      evt, 
+                      kEventParamProcessID, 
+                      typeProcessSerialNumber, 
+                      NULL, 
+                      sizeof(deadPSN), 
+                      NULL, 
+                      &deadPSN
+                      );
+    
 	
 	[self appTerminated:deadPSN];
     return CallNextEventHandler(nextHandler, evt);

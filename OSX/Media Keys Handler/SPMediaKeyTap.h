@@ -15,7 +15,8 @@
 	BOOL _shouldInterceptMediaKeyEvents;
 	id _delegate;
 	// The app that is frontmost in this list owns media keys
-	NSMutableArray *_mediaKeyAppList;
+    NSMutableArray *_mediaKeyAppList;
+    NSNotificationCenter* center;
 }
 + (NSArray*)defaultMediaKeyUserBundleIdentifiers;
 
@@ -34,10 +35,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-
 extern NSString *kMediaKeyUsingBundleIdentifiersDefaultsKey;
 extern NSString *kIgnoreMediaKeysDefaultsKey;
-
 #ifdef __cplusplus
 }
 #endif
