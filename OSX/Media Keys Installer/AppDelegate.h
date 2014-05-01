@@ -17,5 +17,6 @@
 @property (weak) IBOutlet NSView *after;
 
 -(IBAction)install:(id)sender;
+-(IBAction)uninstall:(id)sender;
 -(IBAction)quit:(id)sender;
 @end

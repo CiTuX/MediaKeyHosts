@@ -32,6 +32,22 @@
     [self.after setHidden:NO];
 }
 
+- (IBAction)uninstall:(id)sender
+{
+    NSString* libraryDir = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* hostsDir = [libraryDir stringByAppendingString:@"/Google/Chrome/NativeMessagingHosts"];
+    NSString* binDest = [hostsDir stringByAppendingString:@"/mediakeys"];
+    NSError* error;
+    [[NSFileManager defaultManager] removeItemAtPath:binDest error:&error];
+
+    [self.before setHidden:YES];
+    [self.after setHidden:NO];
+
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"Did you run into a problem? Email us at hello@sway.fm and let us know."];
+    [alert runModal];
+}
+
 -(IBAction)quit:(id)sender {
     [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
 }
